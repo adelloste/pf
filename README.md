@@ -1,2 +1,3 @@
 # pf
-Functional programming
+
+OCaml - Esercizi del corso di Programmazione funzionale

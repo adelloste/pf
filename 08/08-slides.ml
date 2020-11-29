@@ -88,18 +88,3 @@ let rec nodi_con_un_figlio = function
     | Tr(x,Empty,t) | Tr(x,t,Empty) -> t::nodi_con_un_figlio t
     | Tr(x,l,r) -> 
         (nodi_con_un_figlio l) @ (nodi_con_un_figlio r)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
