@@ -36,7 +36,7 @@ let tree = Tr(
     Tr(3,Tr(6,Empty,Empty),Tr(7,Empty,Empty))
 )
 
-let result = sorted_branch tree 4;;
+let result = sorted_branch tree 4
 
 (* ======================================================================== *)
 (* ========================== Altra soluzione ============================= *)
@@ -60,8 +60,8 @@ let rec sorted_branch tree x =
             else raise Not_found
         | Tr(a,l,r) ->
             try
-	            if a > radice l then failwith "sorted_branch"
-	            else a:: sorted_branch l x
-	        with _ ->
-	            if a > radice r then failwith "sorted_branch"
-	            else a:: sorted_branch r x
+                if a > radice l then failwith "sorted_branch"
+                else a:: sorted_branch l x
+            with _ ->
+                if a > radice r then failwith "sorted_branch"
+                else a:: sorted_branch r x;;

@@ -13,7 +13,7 @@ type 'a tree = Empty | Tr of 'a * 'a tree * 'a tree
 let rec labels = function
     | Empty -> []
     | Tr(x,l,r) ->
-        x::(labels t1 @ labels t2)
+        x::(labels l @ labels r)
 
 (* discendenti: 'a -> 'a tree -> 'a list *)
 let rec discendenti x = function
