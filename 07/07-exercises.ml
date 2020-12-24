@@ -24,7 +24,7 @@ let sposta (x,y,dir) act =
         | Gira -> (x,y,gira dir)
         | Avanti n -> avanti (x,y,dir) n
 
-(* esergui: posizione -> azione list -> posizione *)
+(* esegui: posizione -> azione list -> posizione *)
 let rec esegui p = function
     | [] -> p
     | x::rest -> esegui (sposta p x) rest
