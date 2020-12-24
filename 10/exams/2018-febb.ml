@@ -25,6 +25,8 @@ let rec accessibili wallet v = function
 (* safe_path g wallet start goal init = lista dei nodi da start a goal in g dove la somma dei valori di ogni nodo, partendo da init, è maggiore o uguale a 0 *)
 (* from_node: 'a list -> 'a -> 'a -> 'a list *)
 (* from_node visited a counter = cammino che non passa per nodi in visited, da a fino al nodo goal, dove la somma dei valori di ogni nodo, partendo da init, è maggiore o uguale a 0 *)
+(* from_list 'a list -> 'a list -> 'a list *)
+(* from_list visited counter list = cammino non ciclico da uno dei nodi in list fino a goal dove counter è maggiore o uguale 0 e non passa per alcun numero in visited *)
 let safe_path g wallet start goal init =
     let rec from_node visited a counter =
         let v = try List.assoc a wallet with _ -> 0 in

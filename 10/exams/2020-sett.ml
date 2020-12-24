@@ -14,6 +14,8 @@ let rec successori nodo = function
 (* percorso g start tappa target =  *)
 (* from_node: 'a list -> 'a -> color list *)
 (* from_node visited a = cammino non ciclico che parte da start e arriva a target contente tappa, che non passa da alcun nodo di visited *)
+(* from_list 'a list -> 'a list -> 'a list *)
+(* from_list visited list = cammino non ciclico da uno dei nodi in list fino a target contente tappa e non passa per alcun numero in visited *)
 let percorso g start tappa target =
     let rec from_node visited a =
         if List.mem a visited then failwith "from_node"
