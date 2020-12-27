@@ -22,7 +22,7 @@ let path g colors lst start =
     let rec from_node visited a lst =
         let c = List.assoc a colors in
         if List.mem a visited then failwith "from_node"
-        else if [c] = lst then [a]
+        else if [c] = lst || lst = [] then [a]
         else
             let n_lst = if List.hd lst = c then List.tl lst else lst in
             a::(from_list (a::visited) n_lst (vicini a g))
