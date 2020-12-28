@@ -33,3 +33,17 @@ let tree = Tr(
 )
 
 let result = safe_path tree 1 4;;
+
+
+
+
+
+
+
+let tree = Tr(
+    1,
+    Tr(2,Tr(5,Empty,Empty),Tr(8,Tr(9,Tr(15,Empty,Empty),Empty),Tr(10,Empty,Empty))),
+    Tr(3,Tr(7,Empty,Empty),Tr(19,Tr(29,Empty,Empty),Tr(4,Empty,Empty)))
+)
+
+

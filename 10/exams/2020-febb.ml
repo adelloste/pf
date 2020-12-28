@@ -68,9 +68,9 @@ let result = vicini 7 m
 (* raggiungi: 'a graph -> int -> int -> int -> int list *)
 (* raggiungi m maxc start goal = lista dei nodi da start a goal in g dove il numero dei cambi è minore o uguale a maxc *)
 (* from_node: int -> string -> int list -> int -> int list *)
-(* from_node cambi linea visited a = cammino che non passa per i nodi in visited, da a fino al nodo goal dove cambi deve essere minore o uguale a maxc *)
+(* from_node cambi linea visited a = cammino non ciclico da a fino al nodo goal dove cambi deve essere minore o uguale a maxc, che non passa da alcun nodo di visited *)
 (* from_list 'a list -> 'a list -> 'a list *)
-(* from_list visited cambi linea list = cammino non ciclico da uno dei nodi in list fino a goal e non passa per alcun numero in visited *)
+(* from_list visited cambi linea list = cammino non ciclico da un nodo in list fino a goal, che non passa da alcun nodo di visited *)
 let raggiungi m maxc start goal =
     let rec from_node cambi linea visited a =
         if List.mem a visited then failwith "from_node"

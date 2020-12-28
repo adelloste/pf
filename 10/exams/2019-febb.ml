@@ -15,9 +15,9 @@ let rec vicini nodo = function
 (* path: 'a graph -> ('a * color) list -> color list -> 'a -> 'a list *)
 (* path g colors lst start = cammino non ciclico in g che parte da start e rispetta la lista lst *)
 (* from_node: 'a list -> 'a -> color list *)
-(* from_node visited a lst = cammino non ciclico che rispetta la lista lst, che non passa da alcun nodo di visited *)
+(* from_node visited a lst = cammino non ciclico da a un qualsiasi nodo in g che rispetta lst, che non passa da alcun nodo di visited *)
 (* from_list 'a list -> 'a list -> 'a list *)
-(* from_list visited lst list = cammino non ciclico da uno dei nodi in list che rispetta lst e non passa per alcun numero in visited *)
+(* from_list visited lst list = cammino non ciclico da un nodo in list fino a un qualsiasi nodo in g che rispetta lst, che non passa per alcun numero in visited *)
 let path g colors lst start =
     let rec from_node visited a lst =
         let c = List.assoc a colors in

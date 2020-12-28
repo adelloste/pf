@@ -13,9 +13,9 @@ let rec successori nodo = function
 (* sorted_path: 'a graph -> 'a -> 'a -> 'a list' *)
 (* sorted_path g start goal = lista ordinata di nodi da start a goal in g *)
 (* from_node: 'a list -> 'a -> 'a -> 'a list *)
-(* from_node visited a = cammino non ciclico ordinato che non passa per nodi in visited, da a fino al nodo goal *)
+(* from_node visited a = cammino non ciclico ordinato da a fino al nodo goal, che non passa da alcun nodo di visited *)
 (* from_list 'a list -> 'a list -> 'a list *)
-(* from_list visited list = cammino non ciclico ordinato da uno dei nodi in list fino a goal e non passa per alcun numero in visited *)
+(* from_list visited list = cammino non ciclico ordinato da un nodo in list fino a goal, che non passa da alcun nodo di visited *)
 let sorted_path g start goal =
     let rec from_node visited a =
         if List.mem a visited then failwith "from_node"
