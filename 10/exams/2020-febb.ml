@@ -79,9 +79,10 @@ let raggiungi m maxc start goal =
     and from_list visited cambi linea = function
         | [] -> failwith "from_list"
         | (x,y)::rest ->
-            let n_cambi = if linea = y then cambi else (cambi + 1) in
-            let n_linea = if linea = y then linea else y in
-            try from_node n_cambi n_linea visited x with _ -> from_list visited n_cambi n_linea rest
+            try
+                let n_cambi = if linea = y then cambi else (cambi + 1) in
+                from_node n_cambi y visited x
+            with _ -> from_list visited cambi linea rest
     in from_node (-1) "" [] start
 
 let m = [
