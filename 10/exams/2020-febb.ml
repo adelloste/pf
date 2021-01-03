@@ -17,7 +17,7 @@ let rec add acc = function
 (* line: metro -> string -> int list *)
 (* line m ln = lista delle stazioni per le quali passa la linea ln *)
 (* aux: 'a list -> metro -> 'a list *)
-(* aux acc m = lista delle stazioni per le quali passa la linea ln (da verificare)  *)
+(* aux acc m = lista delle stazioni per le quali passa la linea ln *)
 let line m ln =
     let rec aux acc = function
         | [] -> acc
