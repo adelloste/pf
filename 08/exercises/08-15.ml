@@ -1,4 +1,4 @@
-(* #use "08-15.ml";; *)
+(* #use "08/exercises/08-15.ml";; *)
 
 type 'a tree = Empty | Tr of 'a * 'a tree * 'a tree
 

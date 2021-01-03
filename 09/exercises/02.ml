@@ -41,4 +41,3 @@ let tree = Tr(
 let result_postorder = postorder tree
 
 let result_inorder = inorder tree;;
-

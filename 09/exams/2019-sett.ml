@@ -1,4 +1,4 @@
-(* #use "2019-sett.ml";; *)
+(* #use "09/exams/2019-sett.ml";; *)
 
 type 'a ntree = Tr of 'a * 'a ntree list
 

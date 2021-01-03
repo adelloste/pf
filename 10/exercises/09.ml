@@ -32,5 +32,3 @@ let g = [
 ]
 
 let result = cammino_di_nodi g 1 [2;5];;
-    
-    

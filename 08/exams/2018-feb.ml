@@ -1,4 +1,4 @@
-(* #use "2018-feb.ml";; *)
+(* #use "08/exams/2018-feb.ml";; *)
 
 (* ======================================================================== *)
 (* ============= Febbraio 2018, riformulato per alberi binari ============= *)
@@ -24,8 +24,6 @@ let rec safe_path t goal init =
             then x::(try safe_path l goal count with _ -> safe_path r goal count)
             else raise NotFound;;
 
-(* ================================ try it ================================ *)
-
 let tree = Tr(
     3,
     Tr(-10,Tr(5,Tr(11,Empty,Empty),Tr(1,Empty,Empty)),Tr(2,Empty,Empty)),
@@ -33,17 +31,3 @@ let tree = Tr(
 )
 
 let result = safe_path tree 1 4;;
-
-
-
-
-
-
-
-let tree = Tr(
-    1,
-    Tr(2,Tr(5,Empty,Empty),Tr(8,Tr(9,Tr(15,Empty,Empty),Empty),Tr(10,Empty,Empty))),
-    Tr(3,Tr(7,Empty,Empty),Tr(19,Tr(29,Empty,Empty),Tr(4,Empty,Empty)))
-)
-
-

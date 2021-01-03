@@ -30,4 +30,3 @@ let tree = Tr(
 )
 
 let result = foglie_in_lista lst tree;;
-

@@ -39,7 +39,3 @@ let tree = Tr(
 )
 
 let result = ramo_colorato 3 lst tree;;
-
-
-
-

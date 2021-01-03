@@ -1,4 +1,4 @@
-(* #use "2019-sett.ml";; *)
+(* #use "08/exams/2019-sett.ml";; *)
 
 (* ======================================================================== *)
 (* ============= Settembre 2019, riformulato per alberi binari ============ *)
@@ -32,4 +32,3 @@ let tree = Tr(
 )
 
 let result = discendenti 2 tree;;
-

@@ -1,4 +1,4 @@
-(* #use "2018-lugl.ml";; *)
+(* #use "08/exams/2018-lugl.ml";; *)
 
 (* ======================================================================== *)
 (* ============== Luglio 2018, riformulato per alberi binari ============== *)
@@ -19,8 +19,6 @@ let rec depth n = function
     | Tr(x,l,r) ->
         if x = n then 0
         else 1 + (try depth n l with _ -> depth n r)
-
-(* ================================ try it ================================ *)
 
 let tree = Tr(
     1,

@@ -1,4 +1,4 @@
-(* #use "2018-lugl.ml";; *)
+(* #use "09/exams/2018-lugl.ml";; *)
 
 type 'a ntree = Tr of 'a * 'a ntree list
 
@@ -34,4 +34,3 @@ let tree = Tr(
 )
 
 let result = depth 1 tree;;
-

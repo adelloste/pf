@@ -88,4 +88,3 @@ let g =  [
 ]
 
 let result = path g (fun x -> x mod 2 = 0) 3 2;;
-

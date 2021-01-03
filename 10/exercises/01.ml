@@ -25,4 +25,3 @@ let test_connessi graph s e =
 let graph = [(1,2);(1,3);(1,4);(2,3);(2,4);(2,7);(3,5);(4,6);(4,7);(5,7);(6,7)]
 
 let result = test_connessi graph 2 7;;
-
