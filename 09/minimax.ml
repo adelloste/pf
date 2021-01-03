@@ -1,4 +1,7 @@
-(* #use "minimax.ml";; *)
+(* #use "09/minimax.ml";; *)
+
+type player = Min | Max
+type minmaxtree = Leaf of int | Node of (player * int) * minmaxtree list
 
 (* minlist: 'a list -> 'a *)
 (* minlist lst = elemento minimo nella lista lst *)
@@ -46,4 +49,3 @@ let tree =
     )
 
 let result = propagate tree;;
-
