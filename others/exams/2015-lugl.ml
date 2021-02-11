@@ -17,6 +17,12 @@ let radici m =
             else aux (x::acc) ts
     in aux [] m
 
+(* alternative mood *)
+let rec radici = function
+    | [] -> []
+    | Tr(x,_)::ts ->
+        x::radici ts
+
 let t = [
     Tr(1,[ Tr(2,[ Tr(5,[]) ]) ]);
     Tr(8,[ Tr(9,[ Tr(5,[])]); Tr(10,[]) ]);
