@@ -1,5 +1,15 @@
 (* #use "08/exams/2019-sett.ml";; *)
 
+(* complemento: 'a list -> 'a list -> 'a list *)
+let rec complemento superset = function
+    | [] -> superset
+    | x::rest ->
+        if List.mem x superset
+        then complemento (List.filter ((<>) x) superset) rest
+        else failwith "complemento"
+
+let result = complemento [1;2;3;4;5;6] [2;4;6]
+
 (* ======================================================================== *)
 (* ============= Settembre 2019, riformulato per alberi binari ============ *)
 (* ======================================================================== *)
