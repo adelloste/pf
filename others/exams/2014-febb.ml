@@ -28,6 +28,15 @@ let livello k t =
             aux i t @ aux_tlist i ts
     in aux 0 t
 
+(* alternative *)
+let rec livello k (Tr(x,tlist)) =
+    if k = 0 then [x]
+    else livello_tlist (k-1) tlist
+and livello_tlist k = function
+    | [] -> []
+    | t::ts ->
+        livello k t @ livello_tlist k ts
+
 let t = Tr(10,[
     Tr(8,[
         Tr(20,[]);
